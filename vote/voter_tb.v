@@ -1,4 +1,4 @@
-module voter_if_tb;
+module voter_tb;
 reg [3:0] I;
 wire [3:1] O;
 voter_if voter_1(.I(I), .O(O));
@@ -25,7 +25,7 @@ initial
     end
 
 initial begin
-    $dumpfile("voter_if_tb.vcd");
-    $dumpvars(0, voter_if_tb);
+    $dumpfile("voter_tb.vcd");
+    $dumpvars(0, voter_tb);
 end
 endmodule
