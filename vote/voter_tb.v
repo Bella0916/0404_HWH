@@ -1,7 +1,7 @@
 module voter_tb;
 reg [3:0] I;
 wire [3:1] O;
-voter_if voter_1(.I(I), .O(O));
+voter_case voter_1(.I(I), .O(O));
 
 initial 
     begin
