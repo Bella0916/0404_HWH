@@ -1,9 +1,9 @@
-module voter_if (I, O);
+module voter_case (I, O);
 input [3:0] I; // I 4 men
 output [3:1] O; // O Result
 reg [3:1] O; 
 
-always@ (I)
+always@ (I)    
     case (I)
         4'b0000 : O[3] = 1;
         4'b0001 : O[3] = 1;
