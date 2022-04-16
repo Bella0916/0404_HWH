@@ -1,11 +1,11 @@
 VERILOG = iverilog
-TARGET = voter_if.vcd
+TARGET = voter.vcd
 TEMP = temp.vvp
 
 $(TARGET) : $(TEMP)
 	vvp $(TEMP)
-$(TEMP): voter_if_tb.v voter_if.v
-	$(VERILOG) -o $(TEMP) voter_if_tb.v voter_if.v
+$(TEMP): voter_tb.v voter_case.v
+	$(VERILOG) -o $(TEMP) voter_tb.v voter_case.v
 clean:
 	-del $(TARGET)
 	-del $(TEMP)
